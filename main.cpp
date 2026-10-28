@@ -7,8 +7,13 @@
 
 void run(const std::string& source)
 {
-    // TODO: Implement the Lox interpreter.
+    //TODO scanner , Token
+    Scanner scanner = new(source);
+    vector<Token> tokens = Scanner.ScanTokens() ;
     std::cout << source << '\n';
+    for(auto t : tokens){
+        std::cout << t << '\n'; 
+    }
 }
 
 void runFile(const std::string& path)
